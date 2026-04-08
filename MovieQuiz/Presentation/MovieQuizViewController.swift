@@ -176,6 +176,18 @@ final class MovieQuizViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    private func showFirstQuestion() {
+        let firstQuestion = questions[currentQuestionIndex]
+        let viewModel = convert(model: firstQuestion)
+        show(quiz: viewModel)
+    }
+
+    
+    
+    
+    
+    
 
     private var correctAnswers = 0
     
@@ -185,11 +197,7 @@ final class MovieQuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // запускаем задачу через 1 секунду c помощью диспетчера задач
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-           // код, который мы хотим вызвать через 1 секунду
-           self.showNextQuestionOrResults()
-        }
+        showFirstQuestion()
     }
     
     @IBAction private func buttonYes(_ sender: UIButton) {
