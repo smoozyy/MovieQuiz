@@ -1,7 +1,8 @@
-//
-//  Untitled.swift
-//  MovieQuiz
-//
-//  Created by Антон on 09.04.2026.
-//
-
+/// вью модель для состояния "Показа результата"
+struct QuizResultsViewModel {
+    let title: String
+    
+    let text: String
+    
+    let buttonText: String
+}

@@ -25,8 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-rF-bId">
-                                <rect key="frame" x="20" y="86" width="374" height="742"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AEl-rF-bId">
+                                <rect key="frame" x="20" y="86" width="374" height="662"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97c-9B-Ud7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
@@ -46,14 +46,19 @@
                                         </subviews>
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Tx-au-fqW" userLabel="Preview Image">
-                                        <rect key="frame" x="0.0" y="27.5" width="374" height="561"/>
+                                        <rect key="frame" x="0.0" y="43.5" width="374" height="561"/>
                                         <color key="backgroundColor" name="YP White (iOS)"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3Tx-au-fqW" secondAttribute="height" multiplier="2:3" id="HI7-3g-Zcz"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше чем 5?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bm-4T-XG4" userLabel="Question Label">
-                                        <rect key="frame" x="0.0" y="592.5" width="374" height="149.5"/>
+                                        <rect key="frame" x="0.0" y="624.5" width="374" height="37.5"/>
                                         <fontDescription key="fontDescription" name="YSDisplay-Bold" family="YS Display" pointSize="23"/>
                                         <color key="textColor" name="YP White (iOS)"/>
                                         <nil key="highlightedColor"/>
@@ -80,7 +85,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="buttonNo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlV-VO-cgP"/>
+                                            <action selector="buttonNo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rag-A3-hm5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbh-V1-zFw" userLabel="Yes button">
@@ -100,7 +105,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="buttonYes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4e-Nn-tzW"/>
+                                            <action selector="buttonYes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcI-a2-2kM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -113,7 +118,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yHM-0t-owW" secondAttribute="bottom" id="Alu-k8-NWc"/>
                             <constraint firstItem="AEl-rF-bId" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DpN-2P-5DC"/>
                             <constraint firstItem="yHM-0t-owW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nz4-TR-kKS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AEl-rF-bId" secondAttribute="bottom" id="UJV-i2-Jce"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AEl-rF-bId" secondAttribute="bottom" constant="80" id="UJV-i2-Jce"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AEl-rF-bId" secondAttribute="trailing" constant="20" id="ZvT-uz-bcy"/>
                             <constraint firstItem="yHM-0t-owW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tPh-eg-pha"/>
                         </constraints>
