@@ -1,11 +1,8 @@
 import Foundation
 
-
-class QuestionFactory: QuestionFactoryProtocol {
+final class QuestionFactory: QuestionFactoryProtocol {
+    //MARK: Properties
     weak var delegate: QuestionFactoryDelegate?
-    init(delegate: QuestionFactoryDelegate) {
-        self.delegate = delegate
-    }
     private let questions: [QuizQuestion] = [
         QuizQuestion (
             image: "The Godfather",
@@ -48,6 +45,13 @@ class QuestionFactory: QuestionFactoryProtocol {
             text: "Рейтинг этого фильма больше чем 6?",
             correctAnswer: false)
     ]
+    
+    //MARK: Init
+    init(delegate: QuestionFactoryDelegate) {
+        self.delegate = delegate
+    }
+    
+    //MARK: Public methods
     func requestnextQuestion() { /// обьявляем функцию которая ничего не принимает и возвращает опциональную модель QuizQuestion
     guard let index = (0..<questions.count).randomElement() else { /// выбираем индекс вопроса из массива. с помощью функции randomElement выбираем случайный вопрос из всех, возвращая опционал => делаем его распаковку.
         delegate?.didReceiveNextQuestion(question: nil)

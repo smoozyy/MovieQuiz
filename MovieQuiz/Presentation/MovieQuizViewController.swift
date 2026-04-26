@@ -43,7 +43,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         
     }
     
-    
     // MARK: Actions
     
     @IBAction private func buttonYes(_ sender: UIButton) {
@@ -128,18 +127,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         "Количество сыгранных квизов:\(statisticService.gamesCount)\n" +
         "Рекорд: \(bestGame.correct)/\(questionsAmount) \(dateFormatterString)\n" +
         "Средняя точность: \(String(format: "%.2f", statisticService.totalAccuracy))%"
-        
-        
-        
-        
-        
-        
-        
-        
-        
         let model = AlertModel(title: result.title, message: alertMessage, buttonText: result.buttonText) { [weak self] in
                 guard let self = self else { return }
-
                 self.currentQuestionIndex = 0
                 self.correctAnswers = 0
             imageView.layer.borderWidth = 0
@@ -149,7 +138,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             alertPresenter.show(in: self, model: model)
     }
 
-    
     private func showFirstQuestion() {
         guard let firstQuestion = currentQuestion else { return }
         let viewModel = convert(model: firstQuestion)
