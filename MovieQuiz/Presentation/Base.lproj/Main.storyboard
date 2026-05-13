@@ -110,6 +110,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="nie-c0-s1d">
+                                <rect key="frame" x="197" y="452" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black (iOS)"/>
@@ -117,13 +120,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="AEl-rF-bId" secondAttribute="top" constant="10" id="7MG-Tv-cpk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yHM-0t-owW" secondAttribute="bottom" id="Alu-k8-NWc"/>
                             <constraint firstItem="AEl-rF-bId" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DpN-2P-5DC"/>
+                            <constraint firstItem="nie-c0-s1d" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Kos-Yt-fC9"/>
                             <constraint firstItem="yHM-0t-owW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nz4-TR-kKS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AEl-rF-bId" secondAttribute="bottom" constant="80" id="UJV-i2-Jce"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AEl-rF-bId" secondAttribute="trailing" constant="20" id="ZvT-uz-bcy"/>
+                            <constraint firstItem="nie-c0-s1d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fPM-pJ-JR9"/>
                             <constraint firstItem="yHM-0t-owW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tPh-eg-pha"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="nie-c0-s1d" id="4A0-R9-lNG"/>
                         <outlet property="counterLabel" destination="bq4-N0-Dbr" id="PMJ-5d-cFd"/>
                         <outlet property="imageView" destination="3Tx-au-fqW" id="L9s-1j-iwd"/>
                         <outlet property="textLabel" destination="8bm-4T-XG4" id="0EL-Hf-Qci"/>
