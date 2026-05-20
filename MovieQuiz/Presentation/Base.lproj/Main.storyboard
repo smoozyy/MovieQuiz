@@ -37,8 +37,9 @@
                                                 <color key="textColor" name="YP White (iOS)"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq4-N0-Dbr" userLabel="Index Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq4-N0-Dbr" userLabel="indexLabel">
                                                 <rect key="frame" x="338" y="0.0" width="36" height="23.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Index"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YP White (iOS)"/>
                                                 <nil key="highlightedColor"/>
@@ -48,6 +49,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Tx-au-fqW" userLabel="Preview Image">
                                         <rect key="frame" x="0.0" y="43.5" width="374" height="561"/>
                                         <color key="backgroundColor" name="YP White (iOS)"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Poster"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3Tx-au-fqW" secondAttribute="height" multiplier="2:3" id="HI7-3g-Zcz"/>
                                         </constraints>
@@ -71,6 +73,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsr-ew-pkv" userLabel="No button">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
                                         <color key="backgroundColor" name="YP White (iOS)"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="No"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="PzX-SS-phX"/>
                                         </constraints>
@@ -91,6 +94,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbh-V1-zFw" userLabel="Yes button">
                                         <rect key="frame" x="197" y="0.0" width="177" height="60"/>
                                         <color key="backgroundColor" name="YP White (iOS)"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Yes"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="z6p-IY-P2n"/>
                                         </constraints>
